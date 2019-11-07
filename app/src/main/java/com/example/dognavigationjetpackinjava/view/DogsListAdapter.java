@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.example.dognavigationjetpackinjava.R;
 import com.example.dognavigationjetpackinjava.model.DogBreed;
+import com.example.dognavigationjetpackinjava.util.util;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -52,7 +53,8 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
        // System.out.println( + "kkkk");
 
         tvLifeSpan.setText(dogsList.get(position).lifeSpan);
-
+        util.loadImage(image, dogsList.get(position).imageUrl,
+        util.getpD(image.getContext()));
 
     }
 
